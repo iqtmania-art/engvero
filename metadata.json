@@ -1,0 +1,6 @@
+{
+  "name": "ENGVERO – English Learning Platform",
+  "description": "Learn English. Practice Daily. Speak Confidently. Clear English lessons, grammar, tenses, vocabulary, quizzes, and four skills practice.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
