@@ -27,6 +27,7 @@ import { VOCABULARY_CATEGORIES } from '../data/vocabulary';
 import { FOUR_SKILLS } from '../data/skills';
 import { ENGLISH_LEVELS } from '../data/levels';
 import { LATEST_ARTICLES } from '../data/articles';
+import heroEnglishLearning from '../assets/images/hero_english_learning_1791020255111.jpg';
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -90,10 +91,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/90 bg-white group">
               <img
-                src="/src/assets/images/hero_english_learning_1791020255111.jpg"
+                src={heroEnglishLearning}
                 alt="Educational illustration representing structured English lessons, grammar syntax, and vocabulary notebooks"
                 className="w-full h-auto object-cover aspect-16/9 sm:aspect-4/3"
-                referrerPolicy="no-referrer"
               />
               <div className="p-4 bg-slate-900 text-white flex items-center justify-between text-xs">
                 <div>
