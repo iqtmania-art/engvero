@@ -81,8 +81,8 @@ export default function App() {
     let pageDesc = 'Clear English lessons, practical vocabulary, grammar practice, quizzes, and everyday English for learners at every level.';
 
     if (currentPath === '/grammar') {
-      pageTitle = 'English Grammar Lessons – ENGVERO';
-      pageDesc = 'Explore clear English grammar explanations, formulas, examples, and practice exercises.';
+      pageTitle = 'English Grammar Lessons: Rules, Examples & Practice | ENGVERO';
+pageDesc = 'Learn English grammar with clear rules, examples, sentence structures, verb tenses, articles, prepositions, and practice exercises.';
     } else if (currentPath.startsWith('/grammar/')) {
       const slug = currentPath.replace('/grammar/', '');
       const lesson = EDUCATIONAL_LESSONS.find((l) => l.slug === slug);
