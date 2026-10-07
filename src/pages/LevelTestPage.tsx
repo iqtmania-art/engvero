@@ -47,6 +47,64 @@ export const LevelTestPage: React.FC<LevelTestPageProps> = ({ onNavigate }) => {
         <p className="leading-relaxed">
           This test is designed as an educational self-evaluation tool to help you identify strengths and target areas for improvement across English grammar, vocabulary, tenses, and collocations. It does not replace an official proctored CEFR certification (such as IELTS or Cambridge English), but provides a reliable indicator for selecting appropriate study lessons on ENGVERO.
         </p>
+        {/* FAQ / Info block */}
+<div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-5">
+  <h3 className="font-bold text-slate-800 flex items-center gap-1.5 text-base">
+    <HelpCircle className="w-4 h-4 text-slate-500" />
+    About the English Level Test
+  </h3>
+
+  <p className="leading-relaxed">
+    This English Level Test is an educational self-evaluation tool designed
+    to help you identify your current English strengths and areas for
+    improvement. The test provides a general indication of your CEFR level
+    from A1 to C1.
+  </p>
+
+  <div className="space-y-4">
+    <div>
+      <h4 className="font-semibold text-slate-800">
+        What is this English level test?
+      </h4>
+      <p className="leading-relaxed mt-1">
+        This is a short diagnostic English test with 12 questions covering
+        practical English language skills. It is designed to give you a
+        quick estimate of your current English level.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-semibold text-slate-800">
+        What do A1, A2, B1, B2, and C1 mean?
+      </h4>
+      <p className="leading-relaxed mt-1">
+        These levels are based on the Common European Framework of Reference
+        for Languages (CEFR). A1 represents beginner English, while C1
+        represents advanced English proficiency.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-semibold text-slate-800">
+        How long does the test take?
+      </h4>
+      <p className="leading-relaxed mt-1">
+        The diagnostic English level test takes approximately 5 minutes to
+        complete.
+      </p>
+    </div>
+
+    <div>
+      <h4 className="font-semibold text-slate-800">
+        Is this test an official English certification?
+      </h4>
+      <p className="leading-relaxed mt-1">
+        No. This test is an educational self-assessment tool and should not
+        be considered an official English language certification.
+      </p>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );
