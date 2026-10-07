@@ -91,8 +91,8 @@ pageDesc = 'Learn English grammar with clear rules, examples, sentence structure
         pageDesc = lesson.summary;
       }
     } else if (currentPath === '/tenses') {
-      pageTitle = 'Master the 12 English Tenses – ENGVERO';
-      pageDesc = 'Learn all 12 English tenses with formulas, signal words, and example sentences.';
+      pageTitle = 'English Tenses: 12 Tenses, Rules & Examples | ENGVERO';
+pageDesc = 'Learn all 12 English tenses with clear rules, formulas, signal words, examples, and practical English sentences.';
     } else if (currentPath.startsWith('/tenses/')) {
       const slug = currentPath.replace('/tenses/', '');
       const tense = ENGLISH_TENSES.find((t) => t.slug === slug);
