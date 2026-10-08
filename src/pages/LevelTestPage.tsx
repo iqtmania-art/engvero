@@ -18,8 +18,10 @@ export const LevelTestPage: React.FC<LevelTestPageProps> = ({ onNavigate }) => {
           How Good Is Your English?
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
-          Take our diagnostic English Level Test to discover which CEFR level (A1 to C1) best matches your current language skills. After answering 12 questions, you will receive an immediate score breakdown and targeted study recommendations.
-        </p>
+  Take our free English level test to discover your CEFR level from A1 to C1.
+  Answer 12 diagnostic questions and get an immediate score breakdown with
+  targeted study recommendations to improve your English skills.
+</p>
 
         {/* Feature Badges */}
         <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600 pt-2">

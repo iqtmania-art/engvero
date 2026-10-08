@@ -29,8 +29,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
           Contact &amp; Feedback
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
-          Have a question about a grammar rule, want to suggest an educational topic, or report an error? We welcome constructive feedback from English learners and educators.
-        </p>
+  Have a question about English grammar, vocabulary, pronunciation, or
+  learning strategies? Contact ENGVERO to suggest an educational topic, report
+  an error, or share feedback. We welcome questions and constructive feedback
+  from English learners and educators.
+</p>
       </header>
 
       {isSent ? (

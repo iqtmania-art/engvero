@@ -28,7 +28,7 @@ import { FOUR_SKILLS } from '../data/skills';
 import { ENGLISH_LEVELS } from '../data/levels';
 import { LATEST_ARTICLES } from '../data/articles';
 import heroEnglishLearning from '../assets/images/hero_english_learning_1791020255111.jpg';
-
+import skillsLanguageHub from '../assets/images/skills_language_hub_1791020271669.jpg';
 interface HomePageProps {
   onNavigate: (path: string) => void;
 }
@@ -54,8 +54,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Clear English lessons, practical vocabulary, grammar practice, quizzes, and everyday English for learners at every level.
-            </p>
+  Learn English online with clear grammar lessons, practical vocabulary,
+  English tenses, pronunciation practice, interactive quizzes, and everyday
+  English activities. Build your English skills step by step and practice
+  grammar, speaking, listening, reading, and writing with ENGVERO.
+</p>
 
             {/* CTAs */}
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
@@ -697,7 +700,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
             <div className="lg:col-span-4 flex justify-center lg:justify-end">
               <img
-                src="/src/assets/images/skills_language_hub_1791020271669.jpg"
+                src={skillsLanguageHub}
                 alt="Infographic illustrating speaking, listening, reading, and writing"
                 className="w-48 sm:w-56 h-auto rounded-xl shadow-md border border-slate-200 object-cover"
                 referrerPolicy="no-referrer"

@@ -38,8 +38,11 @@ export const PronunciationPage: React.FC<PronunciationPageProps> = ({ onNavigate
         </h1>
 
         <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-          Clear pronunciation is not about eliminating your natural heritage—it is about clarity, correct syllable stress, vowel precision, and natural rhythm so you are understood effortlessly worldwide.
-        </p>
+  Improve your English pronunciation with practical phonetics, syllable stress,
+  vowel sounds, consonant clarity, and natural English rhythm. Build clearer
+  pronunciation and speak English more confidently so you are understood in
+  everyday conversations.
+</p>
       </header>
 
       {/* 1. The Schwa /ə/ */}

@@ -19,8 +19,11 @@ export const DailyEnglishPage: React.FC<DailyEnglishPageProps> = ({ onNavigate }
           Daily English Hub
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
-          Consistent, small doses of English build natural conversational intuition. Here is today&apos;s curated language set:
-        </p>
+  Practice English every day with short, practical lessons designed to build
+  vocabulary, useful expressions, grammar awareness, and natural conversational
+  skills. Explore today&apos;s curated English practice and make steady
+  progress with consistent daily learning.
+</p>
       </div>
 
       <div className="space-y-8">
