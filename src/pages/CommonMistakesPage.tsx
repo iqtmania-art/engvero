@@ -18,8 +18,11 @@ export const CommonMistakesPage: React.FC<CommonMistakesPageProps> = ({ onNaviga
           Common English Mistakes Explained
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
-          Stop second-guessing confusing word pairs. Understand the fundamental distinctions behind Say vs Tell, Speak vs Talk, Look vs See, House vs Home, and avoid typical ESL errors.
-        </p>
+  Learn common English mistakes and confusing word pairs with clear
+  explanations, practical examples, and simple rules. Improve your English
+  grammar, vocabulary, and everyday communication by understanding the
+  differences between commonly confused words and expressions.
+</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

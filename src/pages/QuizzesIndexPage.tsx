@@ -26,8 +26,11 @@ export const QuizzesIndexPage: React.FC<QuizzesIndexPageProps> = ({ onNavigate }
           Test Your English with Free Quizzes
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
-          Interactive multiple-choice quizzes with immediate explanations for every question. No accounts, sign-ups, or passwords required. Practice immediately and review your accuracy.
-        </p>
+  Practice English with free interactive quizzes covering grammar, tenses,
+  vocabulary, common mistakes, and everyday English. Get immediate
+  explanations for every question and improve your English skills through
+  focused practice.
+</p>
       </div>
 
       {/* Categories Filter */}

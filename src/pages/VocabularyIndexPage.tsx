@@ -19,8 +19,11 @@ export const VocabularyIndexPage: React.FC<VocabularyIndexPageProps> = ({ onNavi
           Build Your English Vocabulary
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
-          Move beyond isolated word translation. Master high-frequency vocabulary, natural collocations, phrasal verbs, and idioms with authentic example sentences and native audio pronunciation.
-        </p>
+  Build your English vocabulary with high-frequency words, natural collocations,
+  useful synonyms and antonyms, phrasal verbs, idioms, and practical examples.
+  Learn new English words in context and improve your everyday, academic, business,
+  and advanced English communication skills.
+</p>
       </div>
 
       {/* Featured Words Spotlight */}

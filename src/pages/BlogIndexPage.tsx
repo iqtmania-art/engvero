@@ -18,8 +18,11 @@ export const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ onNavigate }) => {
           Educational English Articles
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
-          Comprehensive guides exploring English grammar rules, easily confused vocabulary, learning methodologies, and everyday conversational tips.
-        </p>
+  Explore practical English learning articles covering grammar rules,
+  commonly confused words, vocabulary, learning strategies, and everyday
+  English. Read clear guides with useful examples to build stronger English
+  skills and communicate with confidence.
+</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

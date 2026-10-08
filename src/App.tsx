@@ -83,7 +83,19 @@ export default function App() {
     if (currentPath === '/grammar') {
       pageTitle = 'English Grammar Lessons: Rules, Examples & Practice | ENGVERO';
 pageDesc = 'Learn English grammar with clear rules, examples, sentence structures, verb tenses, articles, prepositions, and practice exercises.';
-    } else if (currentPath.startsWith('/grammar/')) {
+    } else if (currentPath === '/speaking') {
+  pageTitle = 'English Speaking Practice – Speak English Confidently | ENGVERO';
+  pageDesc = 'Improve your English speaking skills with practical conversation practice, pronunciation guidance, natural expressions, and fluency-building exercises.';
+} else if (currentPath === '/listening') {
+  pageTitle = 'English Listening Practice – Improve Listening Skills | ENGVERO';
+  pageDesc = 'Improve English listening skills with connected speech, natural conversations, varied accents, pronunciation practice, and listening exercises.';
+} else if (currentPath === '/reading') {
+  pageTitle = 'English Reading Practice – Improve Reading Skills | ENGVERO';
+  pageDesc = 'Build English reading skills with comprehension strategies, vocabulary in context, skimming, scanning, and practical reading exercises.';
+} else if (currentPath === '/writing') {
+  pageTitle = 'English Writing Practice – Improve Writing Skills | ENGVERO';
+  pageDesc = 'Improve English writing with grammar practice, paragraph structure, sentence building, clear expression, and practical writing strategies.';
+}else if (currentPath.startsWith('/grammar/')) {
       const slug = currentPath.replace('/grammar/', '');
       const lesson = EDUCATIONAL_LESSONS.find((l) => l.slug === slug);
       if (lesson) {
