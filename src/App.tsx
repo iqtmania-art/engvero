@@ -18,7 +18,7 @@ import { QuizDetailPage } from './pages/QuizDetailPage';
 import { SkillsPage } from './pages/SkillsPage';
 import { CommonMistakesPage } from './pages/CommonMistakesPage';
 import { MistakeDetailPage } from './pages/MistakeDetailPage';
-import { LevelTestPage } from './pages/LevelTestPage';
+import LevelTestPage from './pages/LevelTestPage';
 import { DailyEnglishPage } from './pages/DailyEnglishPage';
 import { BlogIndexPage } from './pages/BlogIndexPage';
 import { ArticleDetailPage } from './pages/ArticleDetailPage';
@@ -26,7 +26,6 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { ContactPage } from './pages/ContactPage';
 import { GeminiChatPage } from './pages/GeminiChatPage';
 import { FloatingChatWidget } from './components/FloatingChatWidget';
-import { AboutPage } from './pages/AboutPage';
 
 // Data
 import { EDUCATIONAL_LESSONS } from './data/lessons';

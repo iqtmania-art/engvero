@@ -27,7 +27,7 @@ import { VOCABULARY_CATEGORIES } from '../data/vocabulary';
 import { FOUR_SKILLS } from '../data/skills';
 import { ENGLISH_LEVELS } from '../data/levels';
 import { LATEST_ARTICLES } from '../data/articles';
-import heroEnglishLearning from '../assets/images/hero_english_learning_1791020255111.jpg';
+import heroEnglishLearning from '../assets/images/hero-english-learning.webp';
 import skillsLanguageHub from '../assets/images/skills_language_hub_1791020271669.jpg';
 interface HomePageProps {
   onNavigate: (path: string) => void;
