@@ -1,4 +1,4 @@
-
+import { VOCABULARY_CATEGORIES } from '../data/vocabulary';
 import React from 'react';
 import {
   Sparkles,
@@ -284,6 +284,20 @@ export const VocabularyWordPage: React.FC<VocabularyWordPageProps> = ({
           <p className="text-xs text-slate-600">
             Explore more high-utility words in the {word.category} domain.
           </p>
+          {(() => {
+  const category = VOCABULARY_CATEGORIES.find(
+    (item) => item.name === word.category
+  );
+
+  return category ? (
+    <button
+      onClick={() => onNavigate(`/vocabulary/${category.slug}`)}
+      className="mt-3 text-sm font-semibold text-indigo-700 hover:text-indigo-900 underline"
+    >
+      Explore {category.name} Vocabulary
+    </button>
+  ) : null;
+})()}
         </div>
 
         <button
