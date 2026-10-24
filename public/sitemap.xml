@@ -8,225 +8,225 @@
 
   <!-- Main Learning Pages -->
   <url>
-    <loc>https://engvero.netlify.app/grammar</loc>
+    <loc>https://engvero.netlify.app/grammar/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses</loc>
+    <loc>https://engvero.netlify.app/tenses/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary</loc>
+    <loc>https://engvero.netlify.app/vocabulary/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/pronunciation</loc>
+    <loc>https://engvero.netlify.app/pronunciation/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/quizzes</loc>
+    <loc>https://engvero.netlify.app/quizzes/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/speaking</loc>
+    <loc>https://engvero.netlify.app/speaking/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/listening</loc>
+    <loc>https://engvero.netlify.app/listening/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/reading</loc>
+    <loc>https://engvero.netlify.app/reading/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/writing</loc>
+    <loc>https://engvero.netlify.app/writing/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/common-mistakes</loc>
+    <loc>https://engvero.netlify.app/common-mistakes/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/english-level-test</loc>
+    <loc>https://engvero.netlify.app/english-level-test/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/daily-english</loc>
+    <loc>https://engvero.netlify.app/daily-english/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/blog</loc>
+    <loc>https://engvero.netlify.app/blog/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/about</loc>
+    <loc>https://engvero.netlify.app/about/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/contact</loc>
+    <loc>https://engvero.netlify.app/contact/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/chat</loc>
+    <loc>https://engvero.netlify.app/chat/</loc>
   </url>
 
   <!-- Grammar Lessons -->
   <url>
-    <loc>https://engvero.netlify.app/grammar/present-simple</loc>
+    <loc>https://engvero.netlify.app/grammar/present-simple/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/grammar/articles-a-an-the</loc>
+    <loc>https://engvero.netlify.app/grammar/articles-a-an-the/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/grammar/prepositions-in-on-at</loc>
+    <loc>https://engvero.netlify.app/grammar/prepositions-in-on-at/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/grammar/present-perfect</loc>
+    <loc>https://engvero.netlify.app/grammar/present-perfect/</loc>
   </url>
 
   <!-- 12 English Tenses -->
   <url>
-    <loc>https://engvero.netlify.app/tenses/present-simple</loc>
+    <loc>https://engvero.netlify.app/tenses/present-simple/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/present-continuous</loc>
+    <loc>https://engvero.netlify.app/tenses/present-continuous/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/present-perfect</loc>
+    <loc>https://engvero.netlify.app/tenses/present-perfect/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/present-perfect-continuous</loc>
+    <loc>https://engvero.netlify.app/tenses/present-perfect-continuous/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/past-simple</loc>
+    <loc>https://engvero.netlify.app/tenses/past-simple/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/past-continuous</loc>
+    <loc>https://engvero.netlify.app/tenses/past-continuous/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/past-perfect</loc>
+    <loc>https://engvero.netlify.app/tenses/past-perfect/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/past-perfect-continuous</loc>
+    <loc>https://engvero.netlify.app/tenses/past-perfect-continuous/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/future-simple</loc>
+    <loc>https://engvero.netlify.app/tenses/future-simple/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/future-continuous</loc>
+    <loc>https://engvero.netlify.app/tenses/future-continuous/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/future-perfect</loc>
+    <loc>https://engvero.netlify.app/tenses/future-perfect/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/tenses/future-perfect-continuous</loc>
+    <loc>https://engvero.netlify.app/tenses/future-perfect-continuous/</loc>
   </url>
 
   <!-- Vocabulary Categories -->
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/everyday-english</loc>
+    <loc>https://engvero.netlify.app/vocabulary/everyday-english/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/business-english</loc>
+    <loc>https://engvero.netlify.app/vocabulary/business-english/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/academic-english</loc>
+    <loc>https://engvero.netlify.app/vocabulary/academic-english/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/travel-english</loc>
+    <loc>https://engvero.netlify.app/vocabulary/travel-english/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/advanced-vocabulary</loc>
+    <loc>https://engvero.netlify.app/vocabulary/advanced-vocabulary/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/synonyms-antonyms</loc>
+    <loc>https://engvero.netlify.app/vocabulary/synonyms-antonyms/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/phrasal-verbs</loc>
+    <loc>https://engvero.netlify.app/vocabulary/phrasal-verbs/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/idioms</loc>
+    <loc>https://engvero.netlify.app/vocabulary/idioms/</loc>
   </url>
 
   <!-- Vocabulary Words -->
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/reliable</loc>
+    <loc>https://engvero.netlify.app/vocabulary/reliable/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/beautiful</loc>
+    <loc>https://engvero.netlify.app/vocabulary/beautiful/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/collaborate</loc>
+    <loc>https://engvero.netlify.app/vocabulary/collaborate/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/resilient</loc>
+    <loc>https://engvero.netlify.app/vocabulary/resilient/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/commute</loc>
+    <loc>https://engvero.netlify.app/vocabulary/commute/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/negotiate</loc>
+    <loc>https://engvero.netlify.app/vocabulary/negotiate/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/hypothesis</loc>
+    <loc>https://engvero.netlify.app/vocabulary/hypothesis/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/itinerary</loc>
+    <loc>https://engvero.netlify.app/vocabulary/itinerary/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/subtle</loc>
+    <loc>https://engvero.netlify.app/vocabulary/subtle/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/abundant</loc>
+    <loc>https://engvero.netlify.app/vocabulary/abundant/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/break-down</loc>
+    <loc>https://engvero.netlify.app/vocabulary/break-down/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/vocabulary/bite-the-bullet</loc>
+    <loc>https://engvero.netlify.app/vocabulary/bite-the-bullet/</loc>
   </url>
 
   <!-- Quizzes -->
   <url>
-    <loc>https://engvero.netlify.app/quizzes/present-simple</loc>
+    <loc>https://engvero.netlify.app/quizzes/present-simple/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/quizzes/articles-a-an-the</loc>
+    <loc>https://engvero.netlify.app/quizzes/articles-a-an-the/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/quizzes/prepositions</loc>
+    <loc>https://engvero.netlify.app/quizzes/prepositions/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/quizzes/english-tenses</loc>
+    <loc>https://engvero.netlify.app/quizzes/english-tenses/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/quizzes/vocabulary</loc>
+    <loc>https://engvero.netlify.app/quizzes/vocabulary/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/quizzes/common-mistakes</loc>
+    <loc>https://engvero.netlify.app/quizzes/common-mistakes/</loc>
   </url>
 
   <!-- Common Mistakes -->
   <url>
-    <loc>https://engvero.netlify.app/common-mistakes/say-vs-tell</loc>
+    <loc>https://engvero.netlify.app/common-mistakes/say-vs-tell/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/common-mistakes/speak-vs-talk</loc>
+    <loc>https://engvero.netlify.app/common-mistakes/speak-vs-talk/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/common-mistakes/look-vs-see</loc>
+    <loc>https://engvero.netlify.app/common-mistakes/look-vs-see/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/common-mistakes/house-vs-home</loc>
+    <loc>https://engvero.netlify.app/common-mistakes/house-vs-home/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/common-mistakes/among-vs-between</loc>
+    <loc>https://engvero.netlify.app/common-mistakes/among-vs-between/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/common-mistakes/much-vs-many</loc>
+    <loc>https://engvero.netlify.app/common-mistakes/much-vs-many/</loc>
   </url>
 
   <!-- Blog Articles -->
   <url>
-    <loc>https://engvero.netlify.app/blog/present-simple-uses-rules-examples</loc>
+    <loc>https://engvero.netlify.app/blog/present-simple-uses-rules-examples/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/blog/say-vs-tell-whats-the-difference</loc>
+    <loc>https://engvero.netlify.app/blog/say-vs-tell-whats-the-difference/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/blog/50-useful-english-words-for-everyday-conversation</loc>
+    <loc>https://engvero.netlify.app/blog/50-useful-english-words-for-everyday-conversation/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/blog/common-english-mistakes-esl-learners-make</loc>
+    <loc>https://engvero.netlify.app/blog/common-english-mistakes-esl-learners-make/</loc>
   </url>
   <url>
-    <loc>https://engvero.netlify.app/blog/how-to-improve-your-english-vocabulary</loc>
+    <loc>https://engvero.netlify.app/blog/how-to-improve-your-english-vocabulary/</loc>
   </url>
 
 </urlset>
