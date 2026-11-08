@@ -16,7 +16,7 @@ export const FloatingChatWidget: React.FC<FloatingChatWidgetProps> = ({ onNaviga
   }
 
   return (
-    <div className="fixed bottom-24 right-4 sm:bottom-20 sm:right-6 z-40">
+    <div className="fixed bottom-6 right-6 z-40">
       {isOpen ? (
         <div className="w-[360px] sm:w-[420px] max-w-[calc(100vw-2rem)] h-[580px] max-h-[calc(100vh-6rem)] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col animate-in slide-in-from-bottom-5 duration-200">
           <div className="p-3 bg-slate-900 text-white flex items-center justify-between">

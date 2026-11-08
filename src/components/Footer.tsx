@@ -200,7 +200,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <pre className="p-3 bg-slate-100 rounded-lg text-slate-800 font-mono overflow-x-auto">
 {`User-agent: *
 Allow: /
-Sitemap: https://engvero.org/sitemap.xml`}
+Sitemap: https://engvero.netlify.app/sitemap.xml`}
                 </pre>
               </div>
 

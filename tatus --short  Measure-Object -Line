@@ -1,0 +1,71 @@
+warning: in the working copy of 'src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Breadcrumbs.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/FiveMinuteChallenge.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/FloatingChatWidget.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Footer.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/GeminiChatInterface.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Header.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/LevelTestEngine.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/PronunciationButton.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/QuizEngine.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/SearchModal.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/articles.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/dailyEnglish.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/lessons.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/levelTestQuestions.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/levels.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/mistakes.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/quizzes.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/searchIndex.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/skills.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/tenses.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/vocabulary.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/AboutPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/ArticleDetailPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/BlogIndexPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/CommonMistakesPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/DailyEnglishPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/GeminiChatPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/GrammarIndexPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/HomePage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/LessonDetailPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/LevelTestPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/MistakeDetailPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/PronunciationPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/QuizDetailPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/QuizzesIndexPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/SkillsPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/TenseDetailPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/TensesIndexPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/VocabularyCategoryPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/VocabularyIndexPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/VocabularyWordPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/types/index.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/utils/speech.ts', LF will be replaced by CRLF the next time Git touches it
+ package.json                          |  14 [32m+[m[31m-[m
+ src/App.tsx                           |  78 [32m+[m[31m--[m
+ src/components/FloatingChatWidget.tsx |   2 [32m+[m[31m-[m
+ src/components/Footer.tsx             |   2 [32m+[m[31m-[m
+ src/components/QuizEngine.tsx         | 214 [32m++++++[m[31m--[m
+ src/data/skills.ts                    | 706 [32m++++++++++++++++++++++++[m[31m--[m
+ src/data/vocabulary.ts                | 898 [32m++++++++++++++++[m[31m------------------[m
+ src/index.css                         |  25 [32m+[m[31m-[m
+ src/main.tsx                          |  17 [32m+[m[31m-[m
+ src/pages/AboutPage.tsx               |   7 [32m+[m[31m-[m
+ src/pages/BlogIndexPage.tsx           | 248 [32m++[m[31m--------[m
+ src/pages/CommonMistakesPage.tsx      |   7 [32m+[m[31m-[m
+ src/pages/DailyEnglishPage.tsx        |   7 [32m+[m[31m-[m
+ src/pages/GrammarIndexPage.tsx        |   1 [32m+[m
+ src/pages/HomePage.tsx                |  17 [32m+[m[31m-[m
+ src/pages/LevelTestPage.tsx           | 223 [32m+[m[31m--------[m
+ src/pages/NotFoundPage.tsx            |  63 [32m+[m[31m--[m
+ src/pages/PronunciationPage.tsx       |   7 [32m+[m[31m-[m
+ src/pages/QuizDetailPage.tsx          |  22 [32m+[m[31m-[m
+ src/pages/QuizzesIndexPage.tsx        |   7 [32m+[m[31m-[m
+ src/pages/SkillsPage.tsx              | 223 [32m++++++++[m[31m-[m
+ src/pages/VocabularyIndexPage.tsx     |   7 [32m+[m[31m-[m
+ src/pages/VocabularyWordPage.tsx      | 195 [32m+[m[31m-------[m
+ src/types/index.ts                    |  12 [32m+[m[31m-[m
+ 24 files changed, 1686 insertions(+), 1316 deletions(-)

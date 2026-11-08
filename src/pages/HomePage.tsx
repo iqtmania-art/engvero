@@ -1,4 +1,9 @@
+
 import React from 'react';
+
+import heroImage from '../assets/images/hero_english_learning_1791020255111.jpg';
+import skillsImage from '../assets/images/skills_language_hub_1791020271669.jpg';
+
 import {
   ArrowRight,
   BookOpen,
@@ -17,8 +22,10 @@ import {
   Bot,
   Zap
 } from 'lucide-react';
+
 import { FiveMinuteChallenge } from '../components/FiveMinuteChallenge';
 import { PronunciationButton } from '../components/PronunciationButton';
+
 import { DAILY_ENGLISH_DATA } from '../data/dailyEnglish';
 import { ENGLISH_TENSES } from '../data/tenses';
 import { COMMON_MISTAKES } from '../data/mistakes';
@@ -27,8 +34,7 @@ import { VOCABULARY_CATEGORIES } from '../data/vocabulary';
 import { FOUR_SKILLS } from '../data/skills';
 import { ENGLISH_LEVELS } from '../data/levels';
 import { LATEST_ARTICLES } from '../data/articles';
-import heroEnglishLearning from '../assets/images/hero-english-learning.webp';
-import skillsLanguageHub from '../assets/images/skills_language_hub_1791020271669.jpg';
+
 interface HomePageProps {
   onNavigate: (path: string) => void;
 }
@@ -53,7 +59,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               Speak Confidently.
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
   Learn English online with clear grammar lessons, practical vocabulary,
   English tenses, pronunciation practice, interactive quizzes, and everyday
   English activities. Build your English skills step by step and practice
@@ -94,9 +100,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/90 bg-white group">
               <img
-                src={heroEnglishLearning}
+                src={heroImage}
                 alt="Educational illustration representing structured English lessons, grammar syntax, and vocabulary notebooks"
                 className="w-full h-auto object-cover aspect-16/9 sm:aspect-4/3"
+                referrerPolicy="no-referrer"
               />
               <div className="p-4 bg-slate-900 text-white flex items-center justify-between text-xs">
                 <div>
@@ -700,7 +707,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
             <div className="lg:col-span-4 flex justify-center lg:justify-end">
               <img
-                src={skillsLanguageHub}
+                src={skillsImage}
                 alt="Infographic illustrating speaking, listening, reading, and writing"
                 className="w-48 sm:w-56 h-auto rounded-xl shadow-md border border-slate-200 object-cover"
                 referrerPolicy="no-referrer"
