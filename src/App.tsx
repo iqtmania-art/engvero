@@ -514,7 +514,7 @@ export default function App({ initialPath }: AppProps) {
 
       <Footer onNavigate={navigate} />
 
-      <FloatingChatWidge
+      <FloatingChatWidget
         onNavigate={navigate}
         currentPath={currentPath}
       />
