@@ -44,29 +44,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h3 className="text-xs font-bold uppercase tracking-wider text-white">Grammar & Structure</h3>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => handleLink('/grammar')} className="hover:text-white transition-colors">
+                <a href="/grammar/" className="hover:text-white transition-colors">
                   English Grammar Guide
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/grammar/present-simple')} className="hover:text-white transition-colors">
+                <a href="/grammar/present-simple/" className="hover:text-white transition-colors">
                   Present Simple Rules
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/grammar/articles-a-an-the')} className="hover:text-white transition-colors">
+                <a href="/grammar/articles-a-an-the/" className="hover:text-white transition-colors">
                   Articles: A, An & The
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/tenses')} className="hover:text-white transition-colors">
+                <a href="/tenses/" className="hover:text-white transition-colors">
                   12 English Tenses
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/common-mistakes')} className="hover:text-white transition-colors">
+                <a href="/common-mistakes/" className="hover:text-white transition-colors">
                   Common English Mistakes
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -76,34 +76,34 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h3 className="text-xs font-bold uppercase tracking-wider text-white">Skills & Vocabulary</h3>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => handleLink('/speaking')} className="hover:text-white transition-colors">
+                <a href="/speaking/" className="hover:text-white transition-colors">
                   Speaking Practice
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/listening')} className="hover:text-white transition-colors">
+                <a href="/listening/" className="hover:text-white transition-colors">
                   Listening Comprehension
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/reading')} className="hover:text-white transition-colors">
+                <a href="/reading/" className="hover:text-white transition-colors">
                   Reading Strategies
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/writing')} className="hover:text-white transition-colors">
+                <a href="/writing/" className="hover:text-white transition-colors">
                   Writing & Paragraphs
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/vocabulary')} className="hover:text-white transition-colors">
+                <a href="/vocabulary/" className="hover:text-white transition-colors">
                   Vocabulary Builder
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/pronunciation')} className="hover:text-white transition-colors">
+                <a href="/pronunciation/" className="hover:text-white transition-colors">
                   Pronunciation Guide
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -113,40 +113,38 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h3 className="text-xs font-bold uppercase tracking-wider text-white">Testing & Practice</h3>
             <ul className="space-y-2 text-xs">
               <li>
-                <button onClick={() => handleLink('/quizzes')} className="hover:text-white transition-colors">
+                <a href="/quizzes/" className="hover:text-white transition-colors">
                   All Practice Quizzes
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/chat')} className="hover:text-white text-sky-400 font-semibold transition-colors flex items-center gap-1">
+                <a href="/chat/" className="hover:text-white text-sky-400 font-semibold transition-colors flex items-center gap-1">
                   <span>Gemini Chat Tutor</span>
                   <span className="text-[10px] px-1 py-0.2 rounded bg-sky-900 text-sky-200">AI</span>
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/english-level-test')} className="hover:text-white transition-colors">
+                <a href="/english-level-test/" className="hover:text-white transition-colors">
                   English Level Test (A1–C1)
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/daily-english')} className="hover:text-white transition-colors">
+                <a href="/daily-english/" className="hover:text-white transition-colors">
                   Daily English Hub
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/blog')} className="hover:text-white transition-colors">
+                <a href="/blog/" className="hover:text-white transition-colors">
                   Educational Blog & Guides
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/about')} className="hover:text-white transition-colors">
+                <a href="/about/" className="hover:text-white transition-colors">
                   About ENGVERO
-                </button>
+                </a>
               </li>
               <li>
-                <button onClick={() => handleLink('/contact')} className="hover:text-white transition-colors">
-                  Contact Us
-                </button>
+                <a href="/contact/" className="hover:text-white transition-colors">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -162,12 +160,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             >
               SEO Sitemap & Robots.txt
             </button>
-            <button onClick={() => handleLink('/about')} className="hover:text-slate-200 transition-colors">
+            <a href="/about/" className="hover:text-slate-200 transition-colors">
               Editorial Policy
-            </button>
-            <button onClick={() => handleLink('/contact')} className="hover:text-slate-200 transition-colors">
+            </a>
+            <a href="/contact/" className="hover:text-slate-200 transition-colors">
               Feedback
-            </button>
+            </a>
           </div>
         </div>
       </div>
