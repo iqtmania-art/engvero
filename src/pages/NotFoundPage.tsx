@@ -1,48 +1,33 @@
+
 import React from 'react';
-import { Home, BookOpen, Languages, ClipboardCheck } from 'lucide-react';
 
 interface NotFoundPageProps {
   onNavigate: (path: string) => void;
 }
 
-const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
+export const NotFoundPage: React.FC<NotFoundPageProps> = ({
+  onNavigate,
+}) => {
   return (
-    <section className="min-h-[70vh] flex items-center justify-center px-6 py-16">
-      <div className="max-w-2xl w-full text-center">
-        <p className="text-7xl font-extrabold text-sky-700">404</p>
+    <main className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
+      <h1 className="text-5xl font-bold text-slate-900">
+        404
+      </h1>
 
-        <h1 className="mt-4 text-3xl sm:text-4xl font-bold text-slate-900">
-          Page Not Found
-        </h1>
+      <h2 className="mt-4 text-2xl font-semibold text-slate-800">
+        Page Not Found
+      </h2>
 
-        <p className="mt-4 text-lg text-slate-600">
-          Sorry, we couldn't find that page. Continue learning English with these sections.
-        </p>
+      <p className="mt-3 text-slate-600">
+        Sorry, the page you are looking for does not exist.
+      </p>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <button onClick={() => onNavigate('/')} className="inline-flex items-center gap-2 rounded-lg bg-sky-700 px-5 py-3 font-semibold text-white">
-            <Home size={18} /> Homepage
-          </button>
-
-          <button onClick={() => onNavigate('/grammar')} className="inline-flex items-center gap-2 rounded-lg border px-5 py-3 font-semibold">
-            <BookOpen size={18} /> Grammar
-          </button>
-
-          <button onClick={() => onNavigate('/vocabulary')} className="inline-flex items-center gap-2 rounded-lg border px-5 py-3 font-semibold">
-            <Languages size={18} /> Vocabulary
-          </button>
-
-          <button onClick={() => onNavigate('/quizzes')} className="inline-flex items-center gap-2 rounded-lg border px-5 py-3 font-semibold">
-            <ClipboardCheck size={18} /> Quizzes
-          </button>
-
-          <button onClick={() => onNavigate('/english-level-test')} className="rounded-lg border px-5 py-3 font-semibold">
-            English Level Test
-          </button>
-        </div>
-      </div>
-    </section>
+      <button
+        onClick={() => onNavigate('/')}
+        className="mt-6 rounded-lg bg-sky-600 px-6 py-3 font-semibold text-white hover:bg-sky-700"
+      >
+        Back to Home
+      </button>
+    </main>
   );
 };
-
-export { NotFoundPage };

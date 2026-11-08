@@ -19,12 +19,13 @@ import { QuizDetailPage } from './pages/QuizDetailPage';
 import { SkillsPage } from './pages/SkillsPage';
 import { CommonMistakesPage } from './pages/CommonMistakesPage';
 import { MistakeDetailPage } from './pages/MistakeDetailPage';
-import LevelTestPage from './pages/LevelTestPage';
+import { LevelTestPage } from './pages/LevelTestPage';
 import { DailyEnglishPage } from './pages/DailyEnglishPage';
 import { BlogIndexPage } from './pages/BlogIndexPage';
 import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ContactPage } from './pages/ContactPage';
+import { AboutPage } from './pages/AboutPage';
 import { GeminiChatPage } from './pages/GeminiChatPage';
 import { FloatingChatWidget } from './components/FloatingChatWidget';
 
@@ -37,17 +38,22 @@ import { COMMON_MISTAKES } from './data/mistakes';
 import { FOUR_SKILLS } from './data/skills';
 import { LATEST_ARTICLES } from './data/articles';
 
-export default function App() {
-  const [currentPath, setCurrentPath] = useState<string>(() => {
-    if (typeof window !== 'undefined') {
-      const path = window.location.pathname;
-      return path.endsWith('/') && path.length > 1
-        ? path.slice(0, -1)
-        : path;
-    }
-    return '/';
-  });
+interface AppProps {
+  initialPath?: string;
+}
 
+export default function App({ initialPath }: AppProps) {
+  const [currentPath, setCurrentPath] = useState<string>(() => {
+    const path =
+      initialPath ??
+      (typeof window !== 'undefined'
+        ? window.location.pathname
+        : '/');
+
+    return path.endsWith('/') && path.length > 1
+      ? path.slice(0, -1)
+      : path;
+  });
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   // Synchronize browser history and page navigation.
@@ -59,7 +65,9 @@ export default function App() {
     }
 
     if (cleanPath !== currentPath) {
-      window.history.pushState({}, '', cleanPath);
+      // Keep public URLs consistent with the trailing-slash sitemap and prerendered pages.
+      const publicPath = cleanPath === '/' ? '/' : `${cleanPath}/`;
+      window.history.pushState({}, '', publicPath);
       setCurrentPath(cleanPath);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -87,7 +95,7 @@ export default function App() {
   // Update document titles, descriptions, and canonical URLs for SEO.
   useEffect(() => {
     let pageTitle =
-      'ENGVERO – Learn English. Practice Daily. Speak Confidently.';
+      'ENGVERO â€“ Learn English. Practice Daily. Speak Confidently.';
 
     let pageDesc =
       'Learn English online with clear grammar lessons, practical vocabulary, tenses, quizzes, and daily practice.';
@@ -103,7 +111,7 @@ export default function App() {
       const lesson = EDUCATIONAL_LESSONS.find((l) => l.slug === slug);
 
       if (lesson) {
-        pageTitle = `${lesson.title} – ENGVERO`;
+        pageTitle = `${lesson.title} â€“ ENGVERO`;
         pageDesc = lesson.summary;
       }
     } else if (currentPath === '/tenses') {
@@ -116,11 +124,11 @@ export default function App() {
       const tense = ENGLISH_TENSES.find((t) => t.slug === slug);
 
       if (tense) {
-        pageTitle = `${tense.name} Tense Guide – ENGVERO`;
+        pageTitle = `${tense.name} Tense Guide â€“ ENGVERO`;
         pageDesc = tense.keyUse;
       }
     } else if (currentPath === '/vocabulary') {
-      pageTitle = 'English Vocabulary Builder – ENGVERO';
+      pageTitle = 'English Vocabulary Builder â€“ ENGVERO';
 
       pageDesc =
         'Build English vocabulary with useful words, collocations, phrasal verbs, idioms, and practical examples.';
@@ -138,17 +146,17 @@ export default function App() {
         );
 
         if (category) {
-          pageTitle = `${category.name} Vocabulary – ENGVERO`;
+          pageTitle = `${category.name} Vocabulary â€“ ENGVERO`;
           pageDesc = category.description;
         }
       }
     } else if (currentPath === '/pronunciation') {
-      pageTitle = 'English Pronunciation & Phonetics Guide – ENGVERO';
+      pageTitle = 'English Pronunciation & Phonetics Guide â€“ ENGVERO';
 
       pageDesc =
         'Improve English pronunciation with vowel sounds, syllable stress, consonant clarity, and natural English rhythm.';
     } else if (currentPath === '/quizzes') {
-      pageTitle = 'Free English Quizzes & Tests – ENGVERO';
+      pageTitle = 'Free English Quizzes & Tests â€“ ENGVERO';
 
       pageDesc =
         'Practice English with interactive quizzes covering grammar, tenses, vocabulary, and common mistakes.';
@@ -157,11 +165,11 @@ export default function App() {
       const quiz = FEATURED_QUIZZES.find((q) => q.slug === slug);
 
       if (quiz) {
-        pageTitle = `${quiz.title} – ENGVERO`;
+        pageTitle = `${quiz.title} â€“ ENGVERO`;
         pageDesc = quiz.description;
       }
     } else if (currentPath === '/common-mistakes') {
-      pageTitle = 'Common English Mistakes Explained – ENGVERO';
+      pageTitle = 'Common English Mistakes Explained â€“ ENGVERO';
 
       pageDesc =
         'Understand common English mistakes and confusing word pairs with clear rules and practical examples.';
@@ -170,45 +178,45 @@ export default function App() {
       const mistake = COMMON_MISTAKES.find((m) => m.slug === slug);
 
       if (mistake) {
-        pageTitle = `${mistake.title} – ENGVERO`;
+        pageTitle = `${mistake.title} â€“ ENGVERO`;
         pageDesc = mistake.summary;
       }
     } else if (currentPath === '/speaking') {
       pageTitle =
-        'English Speaking Practice – Speak English Confidently | ENGVERO';
+        'English Speaking Practice â€“ Speak English Confidently | ENGVERO';
 
       pageDesc =
         'Improve English speaking with practical conversations, natural expressions, pronunciation guidance, and fluency exercises.';
     } else if (currentPath === '/listening') {
       pageTitle =
-        'English Listening Practice – Improve Listening Skills | ENGVERO';
+        'English Listening Practice â€“ Improve Listening Skills | ENGVERO';
 
       pageDesc =
         'Improve English listening with natural conversations, connected speech, varied accents, and practical listening exercises.';
     } else if (currentPath === '/reading') {
       pageTitle =
-        'English Reading Practice – Improve Reading Skills | ENGVERO';
+        'English Reading Practice â€“ Improve Reading Skills | ENGVERO';
 
       pageDesc =
         'Build English reading skills with comprehension strategies, vocabulary in context, skimming, scanning, and reading exercises.';
     } else if (currentPath === '/writing') {
       pageTitle =
-        'English Writing Practice – Improve Writing Skills | ENGVERO';
+        'English Writing Practice â€“ Improve Writing Skills | ENGVERO';
 
       pageDesc =
         'Improve English writing with grammar practice, paragraph structure, sentence building, and clear expression.';
     } else if (currentPath === '/english-level-test') {
-      pageTitle = 'Free English Level Test (A1–C1) | ENGVERO';
+      pageTitle = 'Free English Level Test (A1â€“C1) | ENGVERO';
 
       pageDesc =
         'Take a 12-question English level test to estimate your CEFR level from A1 to C1 and receive study recommendations.';
     } else if (currentPath === '/daily-english') {
-      pageTitle = 'Daily English: Word, Phrase, Idiom & Tip – ENGVERO';
+      pageTitle = 'Daily English: Word, Phrase, Idiom & Tip â€“ ENGVERO';
 
       pageDesc =
         'Practice English daily with useful vocabulary, phrases, idioms, grammar tips, and practical examples.';
     } else if (currentPath === '/blog') {
-      pageTitle = 'English Learning Articles & Guides – ENGVERO';
+      pageTitle = 'English Learning Articles & Guides â€“ ENGVERO';
 
       pageDesc =
         'Explore practical English learning articles about grammar, vocabulary, common mistakes, and learning strategies.';
@@ -217,21 +225,21 @@ export default function App() {
       const article = LATEST_ARTICLES.find((a) => a.slug === slug);
 
       if (article) {
-        pageTitle = `${article.title} – ENGVERO`;
+        pageTitle = `${article.title} â€“ ENGVERO`;
         pageDesc = article.excerpt;
       }
     } else if (currentPath === '/about') {
-      pageTitle = 'About ENGVERO – Simple Lessons, Real English';
+      pageTitle = 'About ENGVERO â€“ Simple Lessons, Real English';
 
       pageDesc =
         'Discover ENGVERO, an English learning platform offering practical lessons, examples, quizzes, and daily practice.';
     } else if (currentPath === '/contact') {
-      pageTitle = 'Contact ENGVERO – Feedback & Suggestions';
+      pageTitle = 'Contact ENGVERO â€“ Feedback & Suggestions';
 
       pageDesc =
         'Contact ENGVERO to suggest English lesson topics, report errors, ask questions, or share educational feedback.';
     } else if (currentPath === '/chat') {
-      pageTitle = 'AI English Practice Chat – ENGVERO';
+      pageTitle = 'AI English Practice Chat â€“ ENGVERO';
 
       pageDesc =
         'Practice conversational English, receive grammar feedback, and improve your writing with an AI learning assistant.';
@@ -240,7 +248,8 @@ export default function App() {
     document.title = pageTitle;
 
     const siteUrl = 'https://engvero.netlify.app';
-    const canonicalUrl = `${siteUrl}${currentPath === '/' ? '/' : currentPath}`;
+    // Match the canonical URL to the sitemap and static prerender output.
+    const canonicalUrl = `${siteUrl}${currentPath === '/' ? '/' : `${currentPath}/`}`;
 
     let canonical = document.querySelector<HTMLLinkElement>(
       'link[rel="canonical"]'
@@ -445,7 +454,7 @@ export default function App() {
       return <CommonMistakesPage onNavigate={navigate} />;
     }
 
-    // 14. English level test
+    // 14. English level tes
     if (currentPath === '/english-level-test') {
       return <LevelTestPage onNavigate={navigate} />;
     }
@@ -472,17 +481,17 @@ export default function App() {
       return <BlogIndexPage onNavigate={navigate} />;
     }
 
-    // 18. About
+    // 18. Abou
     if (currentPath === '/about') {
       return <AboutPage onNavigate={navigate} />;
     }
 
-    // 19. Contact
+    // 19. Contac
     if (currentPath === '/contact') {
       return <ContactPage onNavigate={navigate} />;
     }
 
-    // 20. Gemini chat
+    // 20. Gemini cha
     if (currentPath === '/chat') {
       return <GeminiChatPage onNavigate={navigate} />;
     }

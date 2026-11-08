@@ -174,7 +174,17 @@ export interface SkillCategory {
   description: string;
   methodology: string;
   coreTechniques: { title: string; description: string }[];
-  practiceExercises: { title: string; instructions: string; level: CEFRLevel }[];
+
+practiceExercises: {
+  title: string;
+  instructions: string;
+  level: CEFRLevel;
+  passage?: string;
+  questions?: QuizQuestion[];
+  modelAnswer?: string;
+  audioUrl?: string;
+}[];
+
   recommendedLessons: { title: string; href: string }[];
 }
 

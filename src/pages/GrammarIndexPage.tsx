@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, BookOpen, Clock, Sparkles } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { EDUCATIONAL_LESSONS } from '../data/lessons';
+
 interface GrammarIndexPageProps {
   onNavigate: (path: string) => void;
 }

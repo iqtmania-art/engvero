@@ -17,11 +17,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           About ENGVERO
         </h1>
         <p className="text-lg text-slate-600 leading-relaxed font-medium">
-  ENGVERO is an English learning platform designed to help learners improve
-  grammar, vocabulary, pronunciation, speaking, listening, reading, and writing
-  through clear lessons, practical examples, interactive quizzes, and daily
-  English practice.
-</p>
+          Simple lessons. Real English. Daily practice.
+        </p>
       </header>
 
       <section className="space-y-6 text-sm sm:text-base text-slate-700 leading-relaxed">
