@@ -1,3 +1,6 @@
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { createServer } from 'vite';
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -13,22 +16,22 @@ const siteUrl = 'https://engvero.netlify.app';
 const pages = [
   {
     route: '/',
-    title: 'ENGVERO â€“ Learn English Online with Grammar, Vocabulary & Quizzes',
+    title: 'ENGVERO - Learn English Online with Grammar, Vocabulary & Quizzes',
     description: 'Learn English online with clear grammar lessons, practical vocabulary, English tenses, interactive quizzes, and daily practice for learners worldwide.',
   },
   {
     route: '/blog',
-    title: 'English Learning Articles & Guides â€“ ENGVERO',
+    title: 'English Learning Articles & Guides - ENGVERO',
     description: 'Explore practical English learning articles about grammar, vocabulary, common mistakes, and learning strategies.',
   },
   {
     route: '/english-level-test',
-    title: 'Free English Level Test â€“ Find Your CEFR Level | ENGVERO',
+    title: 'Free English Level Test - Find Your CEFR Level | ENGVERO',
     description: 'Take a free English level test to estimate your CEFR level from A1 to C1 and discover how to improve your English.',
   },
   {
     route: '/vocabulary',
-    title: 'English Vocabulary: Meanings, Examples & Usage â€“ ENGVERO',
+    title: 'English Vocabulary: Meanings, Examples & Usage - ENGVERO',
     description: 'Build your English vocabulary with word meanings, practical examples, synonyms, antonyms, and usage guidance.',
   },
   {
@@ -43,37 +46,37 @@ const pages = [
   },
   {
     route: '/common-mistakes',
-    title: 'Common English Mistakes and How to Avoid Them â€“ ENGVERO',
+    title: 'Common English Mistakes and How to Avoid Them - ENGVERO',
     description: 'Learn to identify and correct common English grammar, vocabulary, and usage mistakes with practical examples.',
   },
   {
     route: '/daily-english',
-    title: 'Daily English Practice â€“ Learn English Every Day | ENGVERO',
+    title: 'Daily English Practice - Learn English Every Day | ENGVERO',
     description: 'Improve your English every day with practical English learning activities, useful expressions, and regular practice.',
   },
   {
     route: '/blog/present-simple-uses-rules-examples',
-    title: 'Present Simple: Uses, Rules and Examples â€“ ENGVERO',
+    title: 'Present Simple: Uses, Rules and Examples - ENGVERO',
     description: 'Learn the main uses of the Present Simple, third-person singular spelling rules, and common mistakes.',
   },
   {
     route: '/blog/say-vs-tell-whats-the-difference',
-    title: "Say vs Tell: What's the Difference? â€“ ENGVERO",
+    title: "Say vs Tell: What's the Difference? - ENGVERO",
     description: 'Learn the difference between say and tell with a clear rule and practical examples.',
   },
   {
     route: '/blog/50-useful-english-words-for-everyday-conversation',
-    title: '50 Useful English Words for Everyday Conversation â€“ ENGVERO',
+    title: '50 Useful English Words for Everyday Conversation - ENGVERO',
     description: 'Learn useful conversational English words and collocations to make your spoken English more natural.',
   },
   {
     route: '/blog/common-english-mistakes-esl-learners-make',
-    title: 'Common English Mistakes ESL Learners Make â€“ ENGVERO',
+    title: 'Common English Mistakes ESL Learners Make - ENGVERO',
     description: 'Explore common English grammar and vocabulary mistakes, with practical tips for correcting them.',
   },
   {
     route: '/blog/how-to-improve-your-english-vocabulary',
-    title: 'How to Improve Your English Vocabulary â€“ ENGVERO',
+    title: 'How to Improve Your English Vocabulary - ENGVERO',
     description: 'Discover strategies for improving English vocabulary through spaced repetition, word roots, and contextual learning.',
   },
     { route: '/grammar/present-perfect', title: 'Present Perfect: Form, Uses and Time Expressions | ENGVERO', description: 'Learn the Present Perfect tense, including its form, uses, time expressions, and practical examples.' },  ...COMMON_MISTAKES.map((mistake) => ({
@@ -81,15 +84,15 @@ const pages = [
     title: `${mistake.title} | ENGVERO`,
     description: mistake.summary,
   })),
-  { route: '/pronunciation', title: 'English Pronunciation & Phonetics Guide – ENGVERO', description: 'Improve English pronunciation with vowel sounds, syllable stress, consonant clarity, and natural English rhythm.' },
-  { route: '/quizzes', title: 'Free English Quizzes & Tests – ENGVERO', description: 'Practice English with interactive quizzes covering grammar, tenses, vocabulary, and common mistakes.' },
-  { route: '/speaking', title: 'English Speaking Practice – Speak English Confidently | ENGVERO', description: 'Improve English speaking with practical conversations, natural expressions, pronunciation guidance, and fluency exercises.' },
-  { route: '/listening', title: 'English Listening Practice – Improve Listening Skills | ENGVERO', description: 'Improve English listening with natural conversations, connected speech, varied accents, and practical listening exercises.' },
-  { route: '/reading', title: 'English Reading Practice – Improve Reading Skills | ENGVERO', description: 'Build English reading skills with comprehension strategies, vocabulary in context, skimming, scanning, and reading exercises.' },
-  { route: '/writing', title: 'English Writing Practice – Improve Writing Skills | ENGVERO', description: 'Improve English writing with grammar practice, paragraph structure, sentence building, and clear expression.' },
-  { route: '/about', title: 'About ENGVERO – Simple Lessons, Real English', description: 'Discover ENGVERO, an English learning platform offering practical lessons, examples, quizzes, and daily practice.' },
-  { route: '/contact', title: 'Contact ENGVERO – Feedback & Suggestions', description: 'Contact ENGVERO to suggest English lesson topics, report errors, ask questions, or share educational feedback.' },
-  { route: '/chat', title: 'AI English Practice Chat – ENGVERO', description: 'Practice conversational English, receive grammar feedback, and improve your writing with an AI learning assistant.' },  ...FEATURED_QUIZZES.map((quiz) => ({
+  { route: '/pronunciation', title: 'English Pronunciation & Phonetics Guide - ENGVERO', description: 'Improve English pronunciation with vowel sounds, syllable stress, consonant clarity, and natural English rhythm.' },
+  { route: '/quizzes', title: 'Free English Quizzes & Tests - ENGVERO', description: 'Practice English with interactive quizzes covering grammar, tenses, vocabulary, and common mistakes.' },
+  { route: '/speaking', title: 'English Speaking Practice - Speak English Confidently | ENGVERO', description: 'Improve English speaking with practical conversations, natural expressions, pronunciation guidance, and fluency exercises.' },
+  { route: '/listening', title: 'English Listening Practice - Improve Listening Skills | ENGVERO', description: 'Improve English listening with natural conversations, connected speech, varied accents, and practical listening exercises.' },
+  { route: '/reading', title: 'English Reading Practice - Improve Reading Skills | ENGVERO', description: 'Build English reading skills with comprehension strategies, vocabulary in context, skimming, scanning, and reading exercises.' },
+  { route: '/writing', title: 'English Writing Practice - Improve Writing Skills | ENGVERO', description: 'Improve English writing with grammar practice, paragraph structure, sentence building, and clear expression.' },
+  { route: '/about', title: 'About ENGVERO - Simple Lessons, Real English', description: 'Discover ENGVERO, an English learning platform offering practical lessons, examples, quizzes, and daily practice.' },
+  { route: '/contact', title: 'Contact ENGVERO - Feedback & Suggestions', description: 'Contact ENGVERO to suggest English lesson topics, report errors, ask questions, or share educational feedback.' },
+  { route: '/chat', title: 'AI English Practice Chat - ENGVERO', description: 'Practice conversational English, receive grammar feedback, and improve your writing with an AI learning assistant.' },  ...FEATURED_QUIZZES.map((quiz) => ({
     route: `/quizzes/${quiz.slug}`,
     title: `${quiz.title} | ENGVERO`,
     description: quiz.description,
@@ -156,8 +159,37 @@ if (!fs.existsSync(indexPath)) {
 
 const template = fs.readFileSync(indexPath, 'utf8');
 
+const viteServer = await createServer({ server: { middlewareMode: true }, appType: 'custom' });
+const { default: App } = await viteServer.ssrLoadModule('/src/App.tsx');
+
 for (const page of pages) {
   let html = template;
+  const renderedHtml = renderToString(
+    React.createElement(App, { initialPath: page.route })
+  );
+  html = html.replace(
+    '<div id="root"></div>',
+    '<div id="root">' + renderedHtml + '</div>'
+  );
+  // Resolve SSR image paths to Vite production assets.
+  html = html.replace(
+    /\/src\/assets\/images\/([^"'\s<>]+?\.(?:jpg|jpeg|png|webp|svg|gif))/gi,
+    (match, filename) => {
+      const extension = path.extname(filename);
+      const basename = path.basename(filename, extension);
+      const assetsDir = path.join(distDir, 'assets');
+
+      const asset = fs.existsSync(assetsDir)
+        ? fs.readdirSync(assetsDir).find(
+            (file) =>
+              file.startsWith(basename + '-') &&
+              file.endsWith(extension)
+          )
+        : undefined;
+
+      return asset ? `/assets/${asset}` : match;
+    }
+  );
   const canonicalUrl =
     page.route === '/' ? `${siteUrl}/` : `${siteUrl}${page.route}/`;
 
@@ -190,5 +222,7 @@ for (const page of pages) {
 
   console.log(`Prerendered: ${page.route}`);
 }
+
+await viteServer.close();
 
 console.log(`Finished prerendering ${pages.length} pages.`);

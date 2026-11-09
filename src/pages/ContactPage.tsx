@@ -160,7 +160,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
               <input
                 id="contact-name"
-                name="name"
+                name="name" autoComplete="name"
                 type="text"
                 required
                 maxLength={120}
@@ -181,7 +181,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
               <input
                 id="contact-email"
-                name="email"
+                name="email" autoComplete="email"
                 type="email"
                 required
                 maxLength={254}
