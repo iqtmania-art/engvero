@@ -24,9 +24,9 @@ export const CommonMistakesPage: React.FC<CommonMistakesPageProps> = ({ onNaviga
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {COMMON_MISTAKES.map((mistake) => (
-          <article
+          <a
             key={mistake.id}
-            onClick={() => onNavigate(`/common-mistakes/${mistake.slug}`)}
+            href={`/common-mistakes/${mistake.slug}/`}
             className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs hover:shadow-md hover:border-amber-300 transition-all flex flex-col justify-between space-y-4 cursor-pointer group"
           >
             <div className="space-y-3">
@@ -46,10 +46,10 @@ export const CommonMistakesPage: React.FC<CommonMistakesPageProps> = ({ onNaviga
 
               <div className="p-3 bg-slate-50 rounded-xl space-y-1 text-xs">
                 <p className="text-rose-700 truncate">
-                  <span className="font-bold">✕</span> {mistake.wrongExample}
+                  <span className="font-bold">&#10007;</span> {mistake.wrongExample}
                 </p>
                 <p className="text-emerald-700 font-medium truncate">
-                  <span className="font-bold">✓</span> {mistake.rightExample}
+                  <span className="font-bold">&#10003;</span> {mistake.rightExample}
                 </p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export const CommonMistakesPage: React.FC<CommonMistakesPageProps> = ({ onNaviga
               <span>Read Rule & Take Quiz</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
-          </article>
+          </a>
         ))}
       </div>
 
@@ -77,3 +77,4 @@ export const CommonMistakesPage: React.FC<CommonMistakesPageProps> = ({ onNaviga
     </div>
   );
 };
+
