@@ -6,3 +6,16 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Local Netlify folder
+.netlify
+*.backup
+*.encoding-backup
+*.bak
+*.backup.txt
+*.backup.ts.txt
+*.ts.txt
+engvero-seo-audit.txt
+netlify-build-error.txt
+netlify/functions/*.zip
+netlify/functions/manifest.json

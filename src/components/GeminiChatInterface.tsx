@@ -1,4 +1,7 @@
+import ReactMarkdown from 'react-markdown';
+
 import React, { useState, useRef, useEffect } from 'react';
+
 import {
   Send,
   Sparkles,
@@ -84,7 +87,7 @@ export const GeminiChatInterface: React.FC<{ initialRole?: ChatRole }> = ({ init
       id: 'welcome-1',
       role: 'assistant',
       text: "Hello! I am your ENGVERO Gemini English Tutor. How can I help you practice your English today? You can converse with me, ask me to check your grammar, or have me review a paragraph you've written!",
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      timestamp: '',
       modelUsed: 'gemini-3.8-flash'
     }
   ]);
@@ -292,7 +295,13 @@ export const GeminiChatInterface: React.FC<{ initialRole?: ChatRole }> = ({ init
                       : 'bg-white border border-slate-200 text-slate-800 rounded-tl-xs shadow-xs'
                   }`}
                 >
-                  <p className="whitespace-pre-wrap">{msg.text}</p>
+                  {isUser ? (
+  <p className="whitespace-pre-wrap">{msg.text}</p>
+) : (
+  <div className="whitespace-pre-wrap break-words [&_p]:mb-2 [&_p:last-child]:mb-0 [&_h1]:font-bold [&_h2]:font-bold [&_h3]:font-semibold [&_h3]:mt-3 [&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-5 [&_ol]:pl-5 [&_li]:mb-1 [&_blockquote]:border-l-2 [&_blockquote]:pl-3 [&_blockquote]:italic">
+    <ReactMarkdown>{msg.text}</ReactMarkdown>
+  </div>
+)}
                 </div>
 
                 {/* Footer metadata & actions */}
@@ -304,13 +313,13 @@ export const GeminiChatInterface: React.FC<{ initialRole?: ChatRole }> = ({ init
                   <span>{msg.timestamp}</span>
                   {!isUser && msg.modelUsed && (
                     <>
-                      <span>·</span>
+                      <span>Ãƒâ€šÃ‚Â·</span>
                       <span className="font-mono">{msg.modelUsed}</span>
                     </>
                   )}
                   {!isUser && (
                     <>
-                      <span>·</span>
+                      <span>Ãƒâ€šÃ‚Â·</span>
                       <PronunciationButton text={msg.text} size="sm" />
                       <button
                         type="button"
@@ -398,7 +407,7 @@ export const GeminiChatInterface: React.FC<{ initialRole?: ChatRole }> = ({ init
           className="flex items-end gap-2"
         >
           <div className="flex-1 relative">
-            <textarea
+            <textarea id="gemini-chat-message" name="geminiChatMessage"
               ref={inputRef}
               rows={2}
               value={input}

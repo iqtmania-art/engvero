@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Bot, X, Sparkles, Maximize2 } from 'lucide-react';
-import { GeminiChatInterface } from './GeminiChatInterface';
+const GeminiChatInterface = lazy(() =>
+  import('./GeminiChatInterface').then((module) => ({
+    default: module.GeminiChatInterface,
+  }))
+);
 
 interface FloatingChatWidgetProps {
   onNavigate: (path: string) => void;
@@ -51,7 +55,9 @@ export const FloatingChatWidget: React.FC<FloatingChatWidgetProps> = ({ onNaviga
           </div>
 
           <div className="flex-1 overflow-hidden">
-            <GeminiChatInterface initialRole="general" />
+            <Suspense fallback={<div className="p-4 text-sm text-slate-500">Loading Gemini Tutor...</div>}>
+  <GeminiChatInterface initialRole="general" />
+</Suspense>
           </div>
         </div>
       ) : (
