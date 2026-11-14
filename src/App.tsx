@@ -95,7 +95,7 @@ export default function App({ initialPath }: AppProps) {
   // Update document titles, descriptions, and canonical URLs for SEO.
   useEffect(() => {
     let pageTitle =
-      'ENGVERO â€“ Learn English. Practice Daily. Speak Confidently.';
+      'ENGVERO – Learn English. Practice Daily. Speak Confidently.';
 
     let pageDesc =
       'Learn English online with clear grammar lessons, practical vocabulary, tenses, quizzes, and daily practice.';
@@ -111,7 +111,7 @@ export default function App({ initialPath }: AppProps) {
       const lesson = EDUCATIONAL_LESSONS.find((l) => l.slug === slug);
 
       if (lesson) {
-        pageTitle = `${lesson.title} â€“ ENGVERO`;
+        pageTitle = `${lesson.title} – ENGVERO`;
         pageDesc = lesson.summary;
       }
     } else if (currentPath === '/tenses') {
@@ -124,11 +124,11 @@ export default function App({ initialPath }: AppProps) {
       const tense = ENGLISH_TENSES.find((t) => t.slug === slug);
 
       if (tense) {
-        pageTitle = `${tense.name} Tense Guide â€“ ENGVERO`;
+        pageTitle = `${tense.name} Tense Guide – ENGVERO`;
         pageDesc = tense.keyUse;
       }
     } else if (currentPath === '/vocabulary') {
-      pageTitle = 'English Vocabulary Builder â€“ ENGVERO';
+      pageTitle = 'English Vocabulary Builder – ENGVERO';
 
       pageDesc =
         'Build English vocabulary with useful words, collocations, phrasal verbs, idioms, and practical examples.';
@@ -146,17 +146,17 @@ export default function App({ initialPath }: AppProps) {
         );
 
         if (category) {
-          pageTitle = `${category.name} Vocabulary â€“ ENGVERO`;
+          pageTitle = `${category.name} Vocabulary – ENGVERO`;
           pageDesc = category.description;
         }
       }
     } else if (currentPath === '/pronunciation') {
-      pageTitle = 'English Pronunciation & Phonetics Guide â€“ ENGVERO';
+      pageTitle = 'English Pronunciation & Phonetics Guide – ENGVERO';
 
       pageDesc =
         'Improve English pronunciation with vowel sounds, syllable stress, consonant clarity, and natural English rhythm.';
     } else if (currentPath === '/quizzes') {
-      pageTitle = 'Free English Quizzes & Tests â€“ ENGVERO';
+      pageTitle = 'Free English Quizzes & Tests – ENGVERO';
 
       pageDesc =
         'Practice English with interactive quizzes covering grammar, tenses, vocabulary, and common mistakes.';
@@ -165,11 +165,11 @@ export default function App({ initialPath }: AppProps) {
       const quiz = FEATURED_QUIZZES.find((q) => q.slug === slug);
 
       if (quiz) {
-        pageTitle = `${quiz.title} â€“ ENGVERO`;
+        pageTitle = `${quiz.title} – ENGVERO`;
         pageDesc = quiz.description;
       }
     } else if (currentPath === '/common-mistakes') {
-      pageTitle = 'Common English Mistakes Explained â€“ ENGVERO';
+      pageTitle = 'Common English Mistakes Explained – ENGVERO';
 
       pageDesc =
         'Understand common English mistakes and confusing word pairs with clear rules and practical examples.';
@@ -178,45 +178,45 @@ export default function App({ initialPath }: AppProps) {
       const mistake = COMMON_MISTAKES.find((m) => m.slug === slug);
 
       if (mistake) {
-        pageTitle = `${mistake.title} â€“ ENGVERO`;
+        pageTitle = `${mistake.title} – ENGVERO`;
         pageDesc = mistake.summary;
       }
     } else if (currentPath === '/speaking') {
       pageTitle =
-        'English Speaking Practice â€“ Speak English Confidently | ENGVERO';
+        'English Speaking Practice – Speak English Confidently | ENGVERO';
 
       pageDesc =
         'Improve English speaking with practical conversations, natural expressions, pronunciation guidance, and fluency exercises.';
     } else if (currentPath === '/listening') {
       pageTitle =
-        'English Listening Practice â€“ Improve Listening Skills | ENGVERO';
+        'English Listening Practice – Improve Listening Skills | ENGVERO';
 
       pageDesc =
         'Improve English listening with natural conversations, connected speech, varied accents, and practical listening exercises.';
     } else if (currentPath === '/reading') {
       pageTitle =
-        'English Reading Practice â€“ Improve Reading Skills | ENGVERO';
+        'English Reading Practice – Improve Reading Skills | ENGVERO';
 
       pageDesc =
         'Build English reading skills with comprehension strategies, vocabulary in context, skimming, scanning, and reading exercises.';
     } else if (currentPath === '/writing') {
       pageTitle =
-        'English Writing Practice â€“ Improve Writing Skills | ENGVERO';
+        'English Writing Practice – Improve Writing Skills | ENGVERO';
 
       pageDesc =
         'Improve English writing with grammar practice, paragraph structure, sentence building, and clear expression.';
     } else if (currentPath === '/english-level-test') {
-      pageTitle = 'Free English Level Test (A1â€“C1) | ENGVERO';
+      pageTitle = 'Free English Level Test (A1–C1) | ENGVERO';
 
       pageDesc =
         'Take a 12-question English level test to estimate your CEFR level from A1 to C1 and receive study recommendations.';
     } else if (currentPath === '/daily-english') {
-      pageTitle = 'Daily English: Word, Phrase, Idiom & Tip â€“ ENGVERO';
+      pageTitle = 'Daily English: Word, Phrase, Idiom & Tip – ENGVERO';
 
       pageDesc =
         'Practice English daily with useful vocabulary, phrases, idioms, grammar tips, and practical examples.';
     } else if (currentPath === '/blog') {
-      pageTitle = 'English Learning Articles & Guides â€“ ENGVERO';
+      pageTitle = 'English Learning Articles & Guides – ENGVERO';
 
       pageDesc =
         'Explore practical English learning articles about grammar, vocabulary, common mistakes, and learning strategies.';
@@ -225,21 +225,21 @@ export default function App({ initialPath }: AppProps) {
       const article = LATEST_ARTICLES.find((a) => a.slug === slug);
 
       if (article) {
-        pageTitle = `${article.title} â€“ ENGVERO`;
+        pageTitle = `${article.title} – ENGVERO`;
         pageDesc = article.excerpt;
       }
     } else if (currentPath === '/about') {
-      pageTitle = 'About ENGVERO â€“ Simple Lessons, Real English';
+      pageTitle = 'About ENGVERO – Simple Lessons, Real English';
 
       pageDesc =
         'Discover ENGVERO, an English learning platform offering practical lessons, examples, quizzes, and daily practice.';
     } else if (currentPath === '/contact') {
-      pageTitle = 'Contact ENGVERO â€“ Feedback & Suggestions';
+      pageTitle = 'Contact ENGVERO – Feedback & Suggestions';
 
       pageDesc =
         'Contact ENGVERO to suggest English lesson topics, report errors, ask questions, or share educational feedback.';
     } else if (currentPath === '/chat') {
-      pageTitle = 'AI English Practice Chat â€“ ENGVERO';
+      pageTitle = 'AI English Practice Chat – ENGVERO';
 
       pageDesc =
         'Practice conversational English, receive grammar feedback, and improve your writing with an AI learning assistant.';

@@ -157,9 +157,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <button
               onClick={() => setShowSeoModal(true)}
               className="hover:text-slate-200 transition-colors underline cursor-pointer"
-            >
-              SEO Sitemap & Robots.txt
-            </button>
+            ></button>
             <a href="/about/" className="hover:text-slate-200 transition-colors">
               Editorial Policy
             </a>
@@ -170,7 +168,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* SEO Sitemap & Robots.txt Modal */}
+      {/*Modal */}
       {showSeoModal && (
         <div
           role="dialog"

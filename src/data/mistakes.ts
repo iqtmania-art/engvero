@@ -122,7 +122,7 @@ export const COMMON_MISTAKES: CommonMistakeItem[] = [
     slug: 'house-vs-home',
     pair: ['House', 'Home'],
     title: 'House vs Home: Physical Building vs Emotional Place',
-    summary: "A 'house' is a physical physical structure or residential building. A 'home' is the place where you live and feel warmth, belonging, and emotional connection.",
+    summary: "A 'house' is a physical structure or residential building. A 'home' is the place where you live and feel warmth, belonging, and emotional connection.",
     difference: "You can buy, paint, build, or sell a 'house'. 'Home' is the abstract concept of your personal living sanctuary. Notice that you say 'go home' without the preposition 'to'.",
     firstWordRules: {
       word: 'House',

@@ -115,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             </div>
 
             <a
-              href="/common-mistakes"
+              href="/common-mistakes/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('/common-mistakes');
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             </a>
 
             <a
-              href="/blog"
+              href="/blog/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('/blog');
@@ -141,7 +141,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             </a>
 
             <a
-              href="/chat"
+              href="/chat/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('/chat');
@@ -231,7 +231,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
 
           <div className="pt-2 border-t border-slate-100 grid grid-cols-2 gap-1">
             <a
-              href="/common-mistakes"
+              href="/common-mistakes/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('/common-mistakes');
@@ -255,7 +255,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
               Daily English
             </a>
             <a
-              href="/blog"
+              href="/blog/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('/blog');
@@ -267,7 +267,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
               Educational Articles
             </a>
             <a
-              href="/english-level-test"
+              href="/english-level-test/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('/english-level-test');
@@ -277,7 +277,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
               Take Level Test
             </a>
             <a
-              href="/chat"
+              href="/chat/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick('/chat');
