@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Search, Menu, X, ChevronDown } from 'lucide-react';
 
 interface HeaderProps {
@@ -13,18 +13,18 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
 
   const mainNavLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Grammar', href: '/grammar' },
-    { label: 'Tenses', href: '/tenses' },
-    { label: 'Vocabulary', href: '/vocabulary' },
-    { label: 'Pronunciation', href: '/pronunciation' },
-    { label: 'Quizzes', href: '/quizzes' }
+    { label: 'Grammar', href: '/grammar/' },
+    { label: 'Tenses', href: '/tenses/' },
+    { label: 'Vocabulary', href: '/vocabulary/' },
+    { label: 'Pronunciation', href: '/pronunciation/' },
+    { label: 'Quizzes', href: '/quizzes/' }
   ];
 
   const skillsLinks = [
-    { label: 'Speaking', href: '/speaking' },
-    { label: 'Listening', href: '/listening' },
-    { label: 'Reading', href: '/reading' },
-    { label: 'Writing', href: '/writing' }
+    { label: 'Speaking', href: '/speaking/' },
+    { label: 'Listening', href: '/listening/' },
+    { label: 'Reading', href: '/reading/' },
+    { label: 'Writing', href: '/writing/' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -34,15 +34,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
   };
 
   const isActive = (href: string) => {
-    if (href === '/') return currentPath === '/';
-    return currentPath.startsWith(href);
+    const cleanCurrent = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+    const cleanHref = href.endsWith('/') ? href : href + '/';
+    if (cleanHref === '/') return cleanCurrent === '/';
+    return cleanCurrent.startsWith(cleanHref);
   };
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Zone 1: Single text element wordmark */}
           <div className="flex items-center">
             <a
               href="/"
@@ -56,7 +57,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             </a>
           </div>
 
-          {/* Zone 2: Navigation Links */}
           <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600" aria-label="Main Navigation">
             {mainNavLinks.map((link) => (
               <a
@@ -66,27 +66,18 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className={`py-1 transition-colors hover:text-sky-600 relative ${
-                  isActive(link.href)
-                    ? 'text-sky-700 font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-sky-600'
-                    : ''
-                }`}
+                className={py-1 transition-colors hover:text-sky-600 relative }
               >
                 {link.label}
               </a>
             ))}
 
-            {/* Skills Dropdown */}
             <div className="relative">
               <button
                 type="button"
                 onClick={() => setSkillsDropdownOpen(!skillsDropdownOpen)}
                 onBlur={() => setTimeout(() => setSkillsDropdownOpen(false), 200)}
-                className={`flex items-center gap-1 py-1 hover:text-sky-600 transition-colors cursor-pointer ${
-                  ['/speaking', '/listening', '/reading', '/writing'].some((p) => currentPath.startsWith(p))
-                    ? 'text-sky-700 font-semibold'
-                    : ''
-                }`}
+                className={lex items-center gap-1 py-1 hover:text-sky-600 transition-colors cursor-pointer }
                 aria-expanded={skillsDropdownOpen}
               >
                 <span>Skills</span>
@@ -103,9 +94,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
                         e.preventDefault();
                         handleNavClick(skill.href);
                       }}
-                      className={`block px-4 py-2 text-xs font-medium hover:bg-sky-50 hover:text-sky-700 transition-colors ${
-                        currentPath.startsWith(skill.href) ? 'text-sky-700 font-semibold bg-sky-50/50' : 'text-slate-700'
-                      }`}
+                      className={lock px-4 py-2 text-xs font-medium hover:bg-sky-50 hover:text-sky-700 transition-colors }
                     >
                       {skill.label}
                     </a>
@@ -115,46 +104,39 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
             </div>
 
             <a
-              href="/common-mistakes"
+              href="/common-mistakes/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/common-mistakes');
+                handleNavClick('/common-mistakes/');
               }}
-              className={`py-1 transition-colors hover:text-sky-600 ${
-                isActive('/common-mistakes') ? 'text-sky-700 font-semibold' : ''
-              }`}
+              className={py-1 transition-colors hover:text-sky-600 }
             >
               Mistakes
             </a>
 
             <a
-              href="/blog"
+              href="/blog/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/blog');
+                handleNavClick('/blog/');
               }}
-              className={`py-1 transition-colors hover:text-sky-600 ${
-                isActive('/blog') ? 'text-sky-700 font-semibold' : ''
-              }`}
+              className={py-1 transition-colors hover:text-sky-600 }
             >
               Blog
             </a>
 
             <a
-              href="/chat"
+              href="/chat/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/chat');
+                handleNavClick('/chat/');
               }}
-              className={`py-1 transition-colors hover:text-sky-600 flex items-center gap-1 ${
-                isActive('/chat') ? 'text-sky-700 font-semibold' : 'text-sky-800 font-medium'
-              }`}
+              className={py-1 transition-colors hover:text-sky-600 flex items-center gap-1 }
             >
               <span>Gemini Chat</span>
             </a>
           </nav>
 
-          {/* Zone 3: Search & Level Test Action */}
           <div className="flex items-center gap-2 sm:gap-3">
             <button
               type="button"
@@ -167,13 +149,12 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
 
             <button
               type="button"
-              onClick={() => handleNavClick('/english-level-test')}
+              onClick={() => handleNavClick('/english-level-test/')}
               className="hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 text-xs font-semibold text-white bg-sky-700 hover:bg-sky-800 rounded-lg shadow-xs transition-colors whitespace-nowrap cursor-pointer focus-visible:outline-sky-500"
             >
               Level Test
             </button>
 
-            {/* Mobile Hamburger Button */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -187,7 +168,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-1 shadow-xl animate-in slide-in-from-top-2 duration-150">
           <div className="grid grid-cols-2 gap-1 pb-3 border-b border-slate-100">
@@ -199,9 +179,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  isActive(link.href) ? 'bg-sky-50 text-sky-700 font-semibold' : 'text-slate-700 hover:bg-slate-50'
-                }`}
+                className={px-3 py-2 rounded-lg text-sm font-medium transition-colors }
               >
                 {link.label}
               </a>
@@ -219,9 +197,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
                     e.preventDefault();
                     handleNavClick(skill.href);
                   }}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(skill.href) ? 'bg-sky-50 text-sky-700 font-semibold' : 'text-slate-700 hover:bg-slate-50'
-                  }`}
+                  className={px-3 py-2 rounded-lg text-sm font-medium transition-colors }
                 >
                   {skill.label}
                 </a>
@@ -231,60 +207,52 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
 
           <div className="pt-2 border-t border-slate-100 grid grid-cols-2 gap-1">
             <a
-              href="/common-mistakes"
+              href="/common-mistakes/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/common-mistakes');
+                handleNavClick('/common-mistakes/');
               }}
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive('/common-mistakes') ? 'bg-sky-50 text-sky-700 font-semibold' : 'text-slate-700 hover:bg-slate-50'
-              }`}
+              className={px-3 py-2 rounded-lg text-sm font-medium transition-colors }
             >
               Common Mistakes
             </a>
             <a
-              href="/daily-english"
+              href="/daily-english/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/daily-english');
+                handleNavClick('/daily-english/');
               }}
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive('/daily-english') ? 'bg-sky-50 text-sky-700 font-semibold' : 'text-slate-700 hover:bg-slate-50'
-              }`}
+              className={px-3 py-2 rounded-lg text-sm font-medium transition-colors }
             >
               Daily English
             </a>
             <a
-              href="/blog"
+              href="/blog/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/blog');
+                handleNavClick('/blog/');
               }}
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive('/blog') ? 'bg-sky-50 text-sky-700 font-semibold' : 'text-slate-700 hover:bg-slate-50'
-              }`}
+              className={px-3 py-2 rounded-lg text-sm font-medium transition-colors }
             >
               Educational Articles
             </a>
             <a
-              href="/english-level-test"
+              href="/english-level-test/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/english-level-test');
+                handleNavClick('/english-level-test/');
               }}
               className="px-3 py-2 rounded-lg text-sm font-semibold text-sky-700 bg-sky-50 hover:bg-sky-100 transition-colors"
             >
               Take Level Test
             </a>
             <a
-              href="/chat"
+              href="/chat/"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavClick('/chat');
+                handleNavClick('/chat/');
               }}
-              className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${
-                isActive('/chat') ? 'bg-sky-700 text-white' : 'bg-slate-900 text-white hover:bg-slate-800'
-              }`}
+              className={px-3 py-2 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between }
             >
               <span>Gemini Chat Tutor</span>
               <span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-500 text-slate-950 font-bold">AI</span>
