@@ -1,3 +1,4 @@
+import { AuthorBox } from '../components/AuthorBox';
 import React from 'react';
 import { ArrowRight, BookOpen, Clock, AlertTriangle } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -24,7 +25,7 @@ export const TenseDetailPage: React.FC<TenseDetailPageProps> = ({ tense, onNavig
       <header className="space-y-4 border-b border-slate-200 pb-8">
         <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
           <span className="text-teal-700 font-semibold">{tense.timeFrame}</span>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">Â·</span>
           <span>{tense.aspect} Aspect</span>
         </div>
 
@@ -97,11 +98,11 @@ export const TenseDetailPage: React.FC<TenseDetailPageProps> = ({ tense, onNavig
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
           <div className="p-3 rounded-xl bg-rose-50 border border-rose-100 text-rose-900">
-            <span className="font-bold text-rose-700 block mb-1">✕ Mistake:</span>
+            <span className="font-bold text-rose-700 block mb-1">âœ• Mistake:</span>
             <span>&ldquo;{tense.commonMistake.incorrect}&rdquo;</span>
           </div>
           <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-900">
-            <span className="font-bold text-emerald-700 block mb-1">✓ Correct:</span>
+            <span className="font-bold text-emerald-700 block mb-1">âœ“ Correct:</span>
             <span>&ldquo;{tense.commonMistake.correct}&rdquo;</span>
           </div>
         </div>
@@ -117,13 +118,12 @@ export const TenseDetailPage: React.FC<TenseDetailPageProps> = ({ tense, onNavig
           <h3 className="text-base font-bold text-teal-950">Practice {tense.name}</h3>
           <p className="text-xs text-teal-800">Test your command with immediate feedback questions.</p>
         </div>
-        <button
-          onClick={() => onNavigate(`/quizzes/${tense.relatedQuizSlug}`)}
+        <a href="/quizzes/${tense.relatedQuizSlug}/" onClick={(e) => { e.preventDefault(); onNavigate("/quizzes/${tense.relatedQuizSlug}/"); }}
           className="px-5 py-2.5 text-xs font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-xl transition-colors cursor-pointer shrink-0"
         >
-          Take Tense Quiz
-        </button>
+          Take Tense Quiz</a>
       </section>
-    </article>
+      <AuthorBox />
+  </article>
   );
 };

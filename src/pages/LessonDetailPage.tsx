@@ -1,3 +1,4 @@
+import { AuthorBox } from '../components/AuthorBox';
 import React from 'react';
 import { ArrowRight, CheckCircle2, AlertTriangle, BookOpen, Volume2 } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -26,9 +27,9 @@ export const LessonDetailPage: React.FC<LessonDetailPageProps> = ({ lesson, onNa
       <header className="space-y-4 border-b border-slate-200 pb-8">
         <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
           <span className="text-sky-700 font-semibold">{lesson.category}</span>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">Â·</span>
           <span>Level {lesson.level}</span>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">Â·</span>
           <span>{lesson.readTime}</span>
         </div>
 
@@ -95,11 +96,11 @@ export const LessonDetailPage: React.FC<LessonDetailPageProps> = ({ lesson, onNa
               <div key={idx} className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2.5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
                   <div className="p-3 rounded-xl bg-rose-50 border border-rose-100 text-rose-900">
-                    <span className="font-bold text-rose-700 block mb-1">✕ Incorrect:</span>
+                    <span className="font-bold text-rose-700 block mb-1">âœ• Incorrect:</span>
                     <span>&ldquo;{mistake.wrong}&rdquo;</span>
                   </div>
                   <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-900">
-                    <span className="font-bold text-emerald-700 block mb-1">✓ Correct:</span>
+                    <span className="font-bold text-emerald-700 block mb-1">âœ“ Correct:</span>
                     <span>&ldquo;{mistake.right}&rdquo;</span>
                   </div>
                 </div>
@@ -153,6 +154,7 @@ export const LessonDetailPage: React.FC<LessonDetailPageProps> = ({ lesson, onNa
           ))}
         </div>
       </section>
-    </article>
+      <AuthorBox />
+  </article>
   );
 };

@@ -1,3 +1,4 @@
+import { AuthorBox } from '../components/AuthorBox';
 import React from 'react';
 import { ArrowRight, Clock, Calendar, CheckCircle2, BookOpen } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -23,9 +24,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ article, o
       <header className="space-y-4 border-b border-slate-200 pb-8">
         <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
           <span className="text-sky-700 font-semibold">{article.category}</span>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">Â·</span>
           <span>{article.readTime}</span>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">Â·</span>
           <span>Published {article.publishedDate}</span>
         </div>
 
@@ -45,7 +46,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ article, o
         <ul className="space-y-2 text-xs sm:text-sm text-sky-950">
           {article.keyPoints.map((pt, i) => (
             <li key={i} className="flex items-start gap-2">
-              <span className="font-bold text-sky-700 shrink-0">•</span>
+              <span className="font-bold text-sky-700 shrink-0">â€¢</span>
               <span>{pt}</span>
             </li>
           ))}
@@ -77,6 +78,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ article, o
           </button>
         </section>
       )}
-    </article>
+      <AuthorBox />
+  </article>
   );
 };
