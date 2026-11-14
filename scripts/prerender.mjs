@@ -56,7 +56,7 @@ const pages = [
   },
   {
     route: '/blog/present-simple-uses-rules-examples',
-    title: 'Present Simple: Uses, Rules and Examples - ENGVERO',
+    title: 'How to Master the Present Simple in Daily Conversation - ENGVERO',
     description: 'Learn the main uses of the Present Simple, third-person singular spelling rules, and common mistakes.',
   },
   {
