@@ -56,7 +56,7 @@ const pages = [
   },
   {
     route: '/blog/present-simple-uses-rules-examples',
-    title: 'Present Simple: Uses, Rules and Examples - ENGVERO',
+    title: 'How to Master the Present Simple in Daily Conversation - ENGVERO',
     description: 'Learn the main uses of the Present Simple, third-person singular spelling rules, and common mistakes.',
   },
   {
@@ -218,6 +218,45 @@ for (const page of pages) {
       : path.join(distDir, page.route.slice(1));
 
   fs.mkdirSync(outputDir, { recursive: true });
+  // --- Dynamic Schema.org Generator ---
+  let pageSchema;
+  if (page.route.startsWith('/blog/')) {
+    pageSchema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": page.title,
+      "description": page.description,
+      "mainEntityOfPage": canonicalUrl,
+      "publisher": {
+        "@type": "Organization",
+        "name": "ENGVERO",
+        "url": siteUrl
+      }
+    };
+  } else if (page.route.startsWith('/grammar/') || page.route.startsWith('/tenses/')) {
+    pageSchema = {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      "name": page.title,
+      "description": page.description,
+      "learningResourceType": "Lesson",
+      "educationalLevel": "Beginner to Intermediate",
+      "inLanguage": "en"
+    };
+  } else if (page.route.startsWith('/quizzes/')) {
+    pageSchema = {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": page.title,
+      "description": page.description
+    };
+  }
+
+  if (pageSchema) {
+    const schemaTag = `<script type="application/ld+json">\n${JSON.stringify(pageSchema, null, 2)}\n</script>`;
+    html = html.replace('</head>', `  ${schemaTag}\n</head>`);
+  }
+  // ------------------------------------
   fs.writeFileSync(path.join(outputDir, 'index.html'), html, 'utf8');
 
   console.log(`Prerendered: ${page.route}`);

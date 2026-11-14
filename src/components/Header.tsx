@@ -13,18 +13,18 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate, onOpenS
 
   const mainNavLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Grammar', href: '/grammar' },
-    { label: 'Tenses', href: '/tenses' },
-    { label: 'Vocabulary', href: '/vocabulary' },
-    { label: 'Pronunciation', href: '/pronunciation' },
-    { label: 'Quizzes', href: '/quizzes' }
+    { label: 'Grammar', href: '/grammar/' },
+    { label: 'Tenses', href: '/tenses/' },
+    { label: 'Vocabulary', href: '/vocabulary/' },
+    { label: 'Pronunciation', href: '/pronunciation/' },
+    { label: 'Quizzes', href: '/quizzes/' }
   ];
 
   const skillsLinks = [
-    { label: 'Speaking', href: '/speaking' },
-    { label: 'Listening', href: '/listening' },
-    { label: 'Reading', href: '/reading' },
-    { label: 'Writing', href: '/writing' }
+    { label: 'Speaking', href: '/speaking/' },
+    { label: 'Listening', href: '/listening/' },
+    { label: 'Reading', href: '/reading/' },
+    { label: 'Writing', href: '/writing/' }
   ];
 
   const handleNavClick = (href: string) => {
