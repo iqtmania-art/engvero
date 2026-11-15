@@ -24,9 +24,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ article, o
       <header className="space-y-4 border-b border-slate-200 pb-8">
         <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
           <span className="text-sky-700 font-semibold">{article.category}</span>
-          <span aria-hidden="true">Â·</span>
+          <span aria-hidden="true">·</span>
           <span>{article.readTime}</span>
-          <span aria-hidden="true">Â·</span>
+          <span aria-hidden="true">·</span>
           <span>Published {article.publishedDate}</span>
         </div>
 

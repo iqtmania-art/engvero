@@ -313,13 +313,13 @@ export const GeminiChatInterface: React.FC<{ initialRole?: ChatRole }> = ({ init
                   <span>{msg.timestamp}</span>
                   {!isUser && msg.modelUsed && (
                     <>
-                      <span>Ãƒâ€šÃ‚Â·</span>
+                      <span>Ãƒâ€šÃ‚·</span>
                       <span className="font-mono">{msg.modelUsed}</span>
                     </>
                   )}
                   {!isUser && (
                     <>
-                      <span>Ãƒâ€šÃ‚Â·</span>
+                      <span>Ãƒâ€šÃ‚·</span>
                       <PronunciationButton text={msg.text} size="sm" />
                       <button
                         type="button"

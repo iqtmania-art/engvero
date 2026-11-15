@@ -158,9 +158,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               onClick={() => setShowSeoModal(true)}
               className="hover:text-slate-200 transition-colors underline cursor-pointer"
             ></button>
-            <a href="/about/" className="hover:text-slate-200 transition-colors">
-              Editorial Policy
-            </a>
+            <a href="/editorial-policy/" className="hover:text-slate-200 transition-colors">
+                Editorial Policy
+              </a>
+              <a href="/privacy-policy/" className="hover:text-slate-200 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="/terms/" className="hover:text-slate-200 transition-colors">
+                Terms
+              </a>
             <a href="/contact/" className="hover:text-slate-200 transition-colors">
               Feedback
             </a>
