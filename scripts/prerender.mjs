@@ -240,7 +240,7 @@ for (const page of pages) {
       "name": page.title,
       "description": page.description,
       "learningResourceType": "Lesson",
-      "educationalLevel": "Beginner to Intermediate",
+      "educationalLevel": (/perfect-continuous|future-perfect|past-perfect/.test(page.route) ? "Upper-Intermediate to Advanced (B2\u2013C1)" : "Beginner to Intermediate (A1\u2013B1)"),
       "inLanguage": "en"
     };
   } else if (page.route.startsWith('/quizzes/')) {
