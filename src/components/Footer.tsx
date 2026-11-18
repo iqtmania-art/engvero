@@ -1,3 +1,4 @@
+import { ShareButtons } from './ShareButtons';
 import React, { useState } from 'react';
 
 interface FooterProps {
@@ -15,7 +16,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+                {/* Global Share Bar for Every Page */}
+        <div className="mb-10 p-5 rounded-2xl bg-slate-800/70 border border-slate-700 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h4 className="text-sm font-bold text-white">Share ENGVERO with Other English Learners</h4>
+            <p className="text-xs text-slate-400 mt-0.5">Help friends and students discover free grammar lessons, tenses, and quizzes.</p>
+          </div>
+          <ShareButtons />
+        </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
           {/* Column 1: Brand & Promise */}
           <div className="lg:col-span-2 space-y-4">
             <button
@@ -32,9 +41,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
             <div className="pt-2 flex items-center gap-3 text-xs text-slate-400">
               <span>ESL / EFL Reference</span>
-              <span>·</span>
-              <span>CEFR Aligned (A1–C2)</span>
-              <span>·</span>
+              <span>Â·</span>
+              <span>CEFR Aligned (A1â€“C2)</span>
+              <span>Â·</span>
               <span>Global Accessibility</span>
             </div>
           </div>
@@ -125,7 +134,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <a href="/english-level-test/" className="hover:text-white transition-colors">
-                  English Level Test (A1–C1)
+                  English Level Test (A1â€“C1)
                 </a>
               </li>
               <li>
@@ -152,7 +161,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} ENGVERO. All educational content created for international English learners.</p>
+          <p>Â© {new Date().getFullYear()} ENGVERO. All educational content created for international English learners.</p>
           <div className="flex items-center gap-4">
             <button
               onClick={() => setShowSeoModal(true)}
